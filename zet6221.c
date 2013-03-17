@@ -143,7 +143,9 @@ static int ctp_get_pendown_state(void)
 * IRQ flag
 */
 static void ctp_clear_penirq(void)
-{
+{	int reg_val;
+	reg_val = readl(gpio_addr + PIO_INT_STAT_OFFSET);
+	reg_val = (reg_val&(1<<(CTP_IRQ_NO)));
 	writel(reg_val, gpio_addr + PIO_INT_STAT_OFFSET);
 	return;
 }

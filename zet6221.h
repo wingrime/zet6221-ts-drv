@@ -1,8 +1,8 @@
 /*
  * drivers/input/touchscreen/ft5x_ts.h
  *
- * wingrime (C) Copyright 2013
- *     
+ * Alexsey Shestacov (C) Copyright 2013
+ *     based on ft5x_ts.h file
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -23,12 +23,12 @@
 #ifndef __LINUX_ZET_TS_H__
 #define __LINUX_ZET_TS_H__
 
-//#undef  AW_GPIO_INT_API_ENABLE
+/*#undef  AW_GPIO_INT_API_ENABLE */
 
-#define I2C_MINORS 	256
-#define I2C_MAJOR 	125
+#define I2C_MINORS 256
+#define I2C_MAJOR 125
 
-struct zet_ts_platform_data{
+struct zet_ts_platform_data {
 	u16	intr;		/* irq number	*/
 };
 
